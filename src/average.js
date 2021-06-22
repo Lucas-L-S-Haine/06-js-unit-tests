@@ -13,7 +13,19 @@
 */
 
 const average = (vector) => {
+  let logic = true;
+  logic = logic && vector.length > 0;
+  for (let index = 0; index < vector.length; index += 1) {
+    logic = logic && typeof(vector[index]) === 'number';
+  };
 
+  let sum = vector[0];
+  for (index = 1; index < vector.length; index += 1) {
+    sum += vector[index];
+  }
+
+  const mean = Math.round(sum / vector.length);
+  return logic ? mean : undefined;
 };
 
 module.exports = average;
