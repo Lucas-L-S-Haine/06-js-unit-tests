@@ -15,7 +15,17 @@
     estudante.feedback() // Retorna: 'Eita pessoa boa!'
 */
 
-/* const createStudent = 0; */
 // const createStudent = (student) => return 0;
 
-    // module.exports = createStudent;
+const createStudent = () => {
+  var myArray = [];
+  for (var counter = 0; counter <= 3; counter += 1) {
+    myArray.push(counter);
+    for (var counter = 2; counter <= 3; counter += 1) {
+      myArray.push(counter);
+    }
+  }
+  return myArray;
+};
+
+    module.exports = createStudent;
